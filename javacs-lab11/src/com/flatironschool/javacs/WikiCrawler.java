@@ -93,7 +93,7 @@ public class WikiCrawler {
 			for (Element elt: elts) {
 				String relURL = elt.attr("href");
 				if (relURL.startsWith("/wiki/")) {
-					String absURL = elt.attr("abs:href");
+					String absURL = "https://en.wikipedia.org" + relURL;
 					queue.offer(absURL);
 				}
 			}
